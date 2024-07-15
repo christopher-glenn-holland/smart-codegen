@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "5999:5999"
+    volumes:
+      # Update the path according to the host operating system
+      #- /home/yourname/rootPathToYourRepos:/repos  # For Linux
+      #- /c/users/yourname/rootPathToYourRepos:/repos  # For Windows
+    environment:
+      FLASK_RUN_PORT: 5999
+      REPO_PATH: /repos  # Path inside the container. DO NOT CHANGE. Should align with volumes section.
+      OPENAI_API_KEY: yourKeyHere
+      CONTEXT_TEXT: >
+        The root of this project on the file system is {projectFullPath}.
+        If you need to make a new file, delete or modify an existing file,
+        reply back with the full path at the top of the file following this pattern:
+        /* File: {projectFullPath}/someNewFile.js */.
+        Ensure you break up every class, component, module, or equivalent.
+        Each code block should only contain 1 file.
+        If there are more than one files, close the first code block and restart
+        for a new code block/file. Ensure you keep the existing functionality unless
+        you are updating/changing it to fulfill the request. Ensure the code is
+        properly formatted.
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        REACT_APP_BACKEND_URL: http://localhost:5999
+    ports:
+      - "3999:3999"
+    volumes:
+      - ./frontend/src:/app/src
+      - ./frontend/public:/app/public

@@ -1,0 +1,177 @@
+# Node.js / React
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build output
+build/
+dist/
+.DS_Store
+
+# Ignore all files in /public except specific ones
+public/*
+!public/index.html
+
+# Ignore built TypeScript files
+*.tsbuildinfo
+
+# npm specific
+.npm/
+
+# IDEs and editors
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# System files
+Thumbs.db
+.DS_Store
+
+# PyCharm specific
+__pycache__/
+*.py[cod]
+*$py.class
+*.swp
+*~
+
+# Python / Flask
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env/
+.venv/
+env/
+ENV/
+
+# Flask specific files
+instance/
+*.pyc
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+.hypothesis/
+.cache
+nosetests.xml
+coverage/
+
+# Pytest
+.pytest_cache/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pylint
+.pylint.d/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Logs
+*.log
+
+# Local .env file
+.env
+*.env
+
+# MacOS
+.DS_Store
+
+# Other
+*.sqlite3
+*.pid
+*.log
+
+# Docker
+docker-compose.override.yml
+
+# Ignore local env files
+.env.local
+.env.*.local
+
+# Ignore uploads directory if it is used for temporary storage
+uploads/
+
+# Tailwind CSS
+tailwind.config.js
+init_backend.sh
+init_frontend.sh
+init_all.sh
+getallreactfiles.sh
+cleanup.sh
+frontend/all_web_files_with_paths.txt
+clean.sh
+docker_cleanup.sh
+docker_up.sh
+all_web_files_with_paths.txt
+backend/lastReceiveResponse.json
+docker-compose.yml
